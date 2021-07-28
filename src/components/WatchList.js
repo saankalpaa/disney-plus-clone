@@ -51,7 +51,7 @@ const WatchList = () => {
                 <Link to={`/detail/` + list.id}>
                   <img src={list.cardImg} alt={list.title} />
                   <Remove onClick={(e) => {removeFromWatchList(e,list.id)}}>
-                    {/* <img src="/images/remove.png" alt = "remove-btn" />   */}
+                    <img src="/images/remove.png" alt = "remove-btn" />  
                   </Remove>
                 </Link>
                 </Wrap>
