@@ -27,8 +27,7 @@ const WatchList = () => {
         });
     },[userName]);
 
-    const removeFromWatchList = (e,id) => {
-      e.preventDefault();
+    const removeFromWatchList = (id) => {
       db.collection('lists')
       .doc(id)
       .delete()
@@ -50,7 +49,7 @@ const WatchList = () => {
                 {list.id}
                 <Link to={`/detail/` + list.id}>
                   <img src={list.cardImg} alt={list.title} />
-                  <Remove onClick={(e) => {removeFromWatchList(e,list.id)}}>
+                  <Remove onClick={() => {removeFromWatchList(list.id)}}>
                     <img src="/images/remove.png" alt = "remove-btn" />  
                   </Remove>
                 </Link>
