@@ -59,8 +59,9 @@ const Detail = (props) => {
       }
   }
 
-  const addToWatchList = () => {
-    db.collection("lists")
+  const addToWatchList = async () => {
+    await db
+    .collection("lists")
       .doc(id)
       .set({
         backgroundImg: detailData.backgroundImg,
@@ -81,8 +82,9 @@ const Detail = (props) => {
       })
   }
 
-  const removeFromWatchList= () => {
-    db.collection('lists')
+  const removeFromWatchList= async () => {
+    await db
+    .collection('lists')
     .doc(id)
     .delete()
     .then(() => {
@@ -212,8 +214,8 @@ const Trailer = styled.button`
 
 const AddList = styled.div`
   margin-right: 16px;
-  height: 44px;
-  width: 44px;
+  height: 34px;
+  width: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,9 +241,9 @@ const AddList = styled.div`
 
 const AddListAfter = styled.div`
   margin-right: 16px;
-  margin-left: -60px;
-  height: 44px;
-  width: 44px;
+  margin-left: -50px;
+  height: 34px;
+  width: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -254,12 +256,12 @@ const AddListAfter = styled.div`
     display: inline-block;
     &:first-child {
       height: 2px;
-      transform: translate(-8px, 2px) rotate(42deg);
-      width: 16px;
+      transform: translate(-6px, 2px) rotate(42deg);
+      width: 12px;
     }
     &:nth-child(2) {
-      height: 24px;
-      transform: translateX(-4px) rotate(50deg);
+      height: 20px;
+      transform: translateX(-2px) rotate(50deg);
       width: 2px;
     }
   }

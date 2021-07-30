@@ -2,8 +2,7 @@ import firebase from 'firebase';
 import "firebase/firestore";
 
 const firebaseConfig = {
-    // apiKey: process.env.REACT_APP_API_KEY,
-    apiKey: "AIzaSyCA61W3sNEJV-uYh3dAW5wWGMh8GTmnVbM",
+    apiKey: process.env.REACT_APP_API_KEY,
     authDomain: "disney-plus-clone-ca265.firebaseapp.com",
     projectId: "disney-plus-clone-ca265",
     storageBucket: "disney-plus-clone-ca265.appspot.com",
