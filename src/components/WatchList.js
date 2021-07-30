@@ -5,13 +5,11 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import db from "../firebase";
 import { setList } from "../features/list/listSlice";
-import { selectUserName } from "../features/user/userSlice";
 
 const WatchList = () => {
   const dispatch = useDispatch();
-  const userName = useSelector(selectUserName);
   let watchLists = [];
-  // const [watchLists, setWatchLists] =useState([])
+  const [makeItHappen, setMakeItHappen] =useState([])
   const [show, setShow] = useState(true);
   const lists = useSelector(selectList);
 
@@ -22,13 +20,7 @@ const WatchList = () => {
         watchLists = [...watchLists, { id: doc.id, ...doc.data() }];
         console.log('watchLists: ', watchLists)
       });
-      // const newWatchLists = snapshot.docs.map((doc) => ({              // <-- I tried to this way 
-      //   id:doc.id,
-      //   ...doc.data()
-      // }))
-      // setWatchLists(newWatchLists)
-      // console.log('watchLists: ', watchLists)
-
+      setMakeItHappen(watchLists)
       dispatch(
         setList({
           watchList: watchLists,
@@ -36,7 +28,7 @@ const WatchList = () => {
       );
     });
     
-  }, [userName]);
+  }, [makeItHappen]);
 
   const removeFromWatchList = async (id) => {
     await db
@@ -58,7 +50,6 @@ const WatchList = () => {
       <h4>Watch List</h4>
       <Content>
         {lists &&
-          show &&
           lists.map((list, key) => (
             <Wrap key={key}>
               {list.id}

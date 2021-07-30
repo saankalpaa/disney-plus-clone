@@ -102,10 +102,6 @@ const Detail = (props) => {
       </ImageTitle>
       <ContentMeta>
         <Controls>
-          {/* <Player> 
-            <img src="/images/play-icon-black.png" alt="" />
-            <span>Play</span>
-          </Player> */}
           <Trailer onClick = {popupTrailer}>
             <img src="/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
@@ -180,7 +176,7 @@ const Controls = styled.div`
   min-height: 56px;
 `;
 
-const Player = styled.button`
+const Trailer = styled.button`
   font-size: 15px;
   margin: 0px 22px 0px 0px;
   padding: 0px 24px;
@@ -193,9 +189,9 @@ const Player = styled.button`
   letter-spacing: 1.8px;
   text-align: center;
   text-transform: uppercase;
-  background: rgb (249, 249, 249);
-  border: none;
-  color: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(249, 249, 249);
+  color: rgb(249, 249, 249);
   img {
     width: 32px;
   }
@@ -212,12 +208,6 @@ const Player = styled.button`
       width: 25px;
     }
   }
-`;
-
-const Trailer = styled(Player)`
-  background: rgba(0, 0, 0, 0.3);
-  border: 1px solid rgb(249, 249, 249);
-  color: rgb(249, 249, 249);
 `;
 
 const AddList = styled.div`
