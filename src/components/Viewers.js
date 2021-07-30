@@ -1,71 +1,37 @@
-// import {useState} from 'react';
 import styled from "styled-components";
-// import useSound from "use-sound";
-// import marvel from "../sound/marvel.mp3";
-// import disney from "../sound/disney.mp3";
-// import pixar from "../sound/pixar.mp3";
-// import starWars from "../sound/starWars.mp3";
-// import nationalGeographic from "../sound/nationalGeographic.mp3";
-
 
 const Viewers = (props) => {
-  // const [song, setSong] = useState('');
-  // const [play, {stop}] = useSound(song);
-  // const [playD, setPlayD] = useState(false);
-  // const [playP, setPlayP] = useState(false);
-  // const [playM, setPlayM] = useState(false);
-  // const [playS, setPlayS] = useState(false);
-  // const [playN, setPlayN] = useState(false);
-  
-  // const togglePlay = (name) => {
-  //   setSong(name)
-  // }
   
   return (
     <Container>
       <Wrap>
         <img 
-          src="/images/viewers-disney.png" alt="" 
-          // onMouseEnter= {setSong(disney)} 
-          // onMouseLeave = {play}
-          />
+          src="/images/viewers-disney.png" alt=""/>
         <video autoPlay={true} loop={true} playsInline={true}>
           <source src="/videos/1564674844-disney.mp4" type="video/mp4" />
         </video>
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-pixar.png" alt="" 
-          // onMouseEnter= {setSong(pixar)} 
-          // onMouseLeave = {stop}
-        />
+        <img src="/images/viewers-pixar.png" alt=""/>
         <video autoPlay={true} loop={true} playsInline={true}>
           <source src="/videos/1564676714-pixar.mp4" type="video/mp4" />
         </video>
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-marvel.png" alt="" 
-          // onMouseEnter= {setSong(marvel)} 
-          // onMouseLeave = {stop}
-        />
+        <img src="/images/viewers-marvel.png" alt=""/>
         <video autoPlay={true} loop={true} playsInline={true}>
           <source src="/videos/1564676115-marvel.mp4" type="video/mp4" />
         </video>
         
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-starwars.png" alt="" 
-          // onMouseEnter= {setSong(starWars)} 
-          // onMouseLeave = {stop}
-        />
+        <img src="/images/viewers-starwars.png" alt="" />
         <video autoPlay={true} loop={true} playsInline={true}>
           <source src="/videos/1608229455-star-wars.mp4" type="video/mp4" />
         </video>
       </Wrap>
       <Wrap>
-        <img src="/images/viewers-national.png" alt="" 
-          // onMouseEnter= {setSong(nationalGeographic)} 
-          // onMouseLeave = {stop}
-        />
+        <img src="/images/viewers-national.png" alt="" />
         <video autoPlay={true} loop={true} playsInline={true}>
           <source
             src="/videos/1564676296-national-geographic.mp4"

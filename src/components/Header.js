@@ -10,7 +10,6 @@ import {
     setSignOutState,
     setUserLoginDetails,
 } from "../features/user/userSlice";
-// import Subscribe from '../components/Subscribe';
 
 const Header = (props) => {
 
@@ -61,7 +60,6 @@ const Header = (props) => {
             <Logo>
                 <img src="/images/logo.svg" alt="DIsney+"/>
             </Logo>
-            {/* <Subscribe >Assign Now</Subscribe> */}
 
             { !userName ? (
                 <Login onClick={handleAuth}>Login</Login> 
@@ -72,10 +70,6 @@ const Header = (props) => {
                         <img src="/images/home-icon.svg" alt="HOME"/>
                         <span>HOME</span>
                     </a>
-                    {/* <a href="/search">
-                        <img src="/images/search-icon.svg" alt="search"/>
-                        <span>SEARCH</span>
-                    </a> */}
                     <Link to= "/watchlist">
                         <a href="/watchlist">
                             <img src="/images/watchlist-icon.svg" alt="watchlist"/>
@@ -83,18 +77,6 @@ const Header = (props) => {
                         </a>
                     </Link>
                    
-                    {/* <a href="/originals">
-                        <img src="/images/original-icon.svg" alt="originals"/>
-                        <span>ORIGINALS</span>
-                    </a>
-                    <a href="/movies">
-                        <img src="/images/movie-icon.svg" alt="movies"/>
-                        <span>MOVIES</span>
-                    </a>
-                    <a href="/series">
-                        <img src="/images/series-icon.svg" alt="series"/>
-                        <span>SERIES</span>
-                    </a> */}
                 </NavMenu>
                 <SignOut>
                     <UserImg src={userPhoto} alt={userName} />

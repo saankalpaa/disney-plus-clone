@@ -3,8 +3,6 @@ import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import db from "../firebase";
 import YouTube from "react-youtube";
-// import Popup from 'reactjs-popup';
-// import 'reactjs-popup/dist/index.css';
 
 const Detail = (props) => {
   const { id } = useParams();
@@ -104,10 +102,10 @@ const Detail = (props) => {
       </ImageTitle>
       <ContentMeta>
         <Controls>
-          <Player>
+          {/* <Player> 
             <img src="/images/play-icon-black.png" alt="" />
             <span>Play</span>
-          </Player>
+          </Player> */}
           <Trailer onClick = {popupTrailer}>
             <img src="/images/play-icon-white.png" alt="" />
             <span>Trailer</span>
